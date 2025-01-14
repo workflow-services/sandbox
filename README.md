@@ -22,3 +22,12 @@ $> python process2.py abcdef
 The new file_id for the modified file is: xyz    # This means that a new file has been generated and stored back into Minio. 
 {"file_id": "xyz"} 
 ```
+
+# Image Building using Image Stream
+
+- oc apply -f imagestream.yaml
+- oc apply -f buildconfig.yaml
+- oc start-build process1 --from-dir=.  # This will update the image with the current code
+- Run the pod using ./run_pod.sh
+
+You can use the script ./deploy.sh to run these steps above.

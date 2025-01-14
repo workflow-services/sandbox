@@ -10,7 +10,7 @@ file_id = sys.argv[1]
 current_time = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
 
 # Temporary local file path to store the file downloaded from Minio
-downloaded_file_path = "downloaded_output.dat"
+downloaded_file_path = "/tmp/downloaded_output.dat"
 
 # Step 2: Get the file using the file_id
 get(file_id, downloaded_file_path)

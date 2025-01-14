@@ -4,7 +4,7 @@ from s3_controller import put, get, create_bucket_if_does_not_exist
 
 current_time = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
 
-file_path = "output.dat"
+file_path = "/tmp/output.dat"
 
 with open(file_path, 'w') as f:
     f.write(f"This is a very complex dataset.\n")
