@@ -10,10 +10,12 @@ with open(file_path, 'w') as f:
     f.write(f"This is a very complex dataset.\n")
     f.write(f"Written at: {current_time}\n")
 
-print("Going to send this file to Minio.")
+# print("Going to send this file to Minio.")
 
 create_bucket_if_does_not_exist()
 file_id = put(file_path)
-print(f"This is the generated file_id: {file_id}")
+# print(f"This is the generated file_id: {file_id}")
 print(json.dumps({"file_id": file_id}))
 
+with open("process1_file_id.txt", "w") as file:
+    file.write(file_id)
