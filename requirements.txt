@@ -1,1 +1,3 @@
 git+https://github.com/workflow-services/s3-controller.git
+intersect-sdk
+pyyaml
